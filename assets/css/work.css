@@ -1,0 +1,55 @@
+.work-nav { background: #0d0d0d; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+.work-back { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #5a4e28; text-decoration: none; }
+.work-nav-title { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #c9a84c; }
+.marquee { background: #1a0a0a; padding: 3rem 2rem 2.5rem; text-align: center; border-bottom: 3px solid #8b1a1a; }
+.marquee-lights { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+.marquee-lights-bottom { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; }
+.light-bulb { width: 8px; height: 8px; background: #f5d060; border-radius: 50%; outline: 2px solid #8b6a00; }
+.marquee-eyebrow { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 6px; text-transform: uppercase; color: #8b1a1a; margin-bottom: 1rem; }
+.marquee-title { font-family: 'EB Garamond', serif; font-size: 72px; font-weight: 400; font-style: italic; color: #f5e8c8; margin: 0 0 0.5rem; letter-spacing: 4px; line-height: 1; }
+.marquee-sub { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 5px; text-transform: uppercase; color: #5a3a1a; }
+.filter-row { background: #f5f0e8; padding: 1.25rem 2rem; display: flex; gap: 0.75rem; border-bottom: 1px solid #d4c9b0; flex-wrap: wrap; }
+.ftag { padding: 0.35rem 1rem; font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; border: 1px solid #c4b89a; color: #7a6a4a; background: transparent; cursor: pointer; text-decoration: none; }
+.ftag.active { background: #8b1a1a; border-color: #8b1a1a; color: #f5e8c8; }
+.ftag:hover { border-color: #8b1a1a; color: #8b1a1a; }
+.gallery-section { padding: 2rem; background: #f5f0e8; }
+.section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.sh-line { flex: 1; height: 1px; background: #d4c9b0; }
+.sh-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #8b1a1a; white-space: nowrap; }
+.sh-diamond { width: 5px; height: 5px; background: #8b1a1a; transform: rotate(45deg); flex-shrink: 0; }
+.sh-diamond.green { background: #1a3a1a; }
+.sh-label.green { color: #1a3a1a; }
+.art-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+.art-card { background: #faf7f2; border: 1px solid #d4c9b0; }
+.art-card.featured { grid-column: span 2; }
+.frame { margin: 0.75rem; border: 6px solid #e8e0d0; position: relative; }
+.frame-inner { background: #ede8de; display: flex; align-items: center; justify-content: center; height: 160px; position: relative; }
+.art-card.featured .frame-inner { height: 200px; }
+.frame-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.frame-corner { position: absolute; width: 16px; height: 16px; }
+.fc-tl { top: -1px; left: -1px; border-top: 2px solid #8b6a3a; border-left: 2px solid #8b6a3a; }
+.fc-tr { top: -1px; right: -1px; border-top: 2px solid #8b6a3a; border-right: 2px solid #8b6a3a; }
+.fc-bl { bottom: -1px; left: -1px; border-bottom: 2px solid #8b6a3a; border-left: 2px solid #8b6a3a; }
+.fc-br { bottom: -1px; right: -1px; border-bottom: 2px solid #8b6a3a; border-right: 2px solid #8b6a3a; }
+.placeholder-text { font-family: 'EB Garamond', serif; font-size: 13px; font-style: italic; color: #b8a888; text-align: center; line-height: 1.8; }
+.card-plaque { background: #f0ebe0; border-top: 1px solid #d4c9b0; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: baseline; }
+.plaque-title { font-family: 'EB Garamond', serif; font-size: 15px; font-style: italic; color: #2a1a0a; }
+.plaque-medium { font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #8b6a3a; }
+.theater-section { background: #0d0a14; padding: 2rem; border-top: 3px solid #2a1a4a; border-bottom: 3px solid #2a1a4a; }
+.theater-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.th-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #6a4a9a; white-space: nowrap; }
+.th-line { flex: 1; height: 1px; background: #2a1a4a; }
+.performance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #2a1a4a; }
+.perf-card { background: #0d0a14; padding: 1.25rem; }
+.perf-type { font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #6a4a9a; margin-bottom: 0.5rem; }
+.perf-title { font-family: 'EB Garamond', serif; font-size: 17px; font-style: italic; color: #d0c0e8; margin-bottom: 0.4rem; }
+.perf-desc { font-family: 'EB Garamond', serif; font-size: 13px; color: #6a5a8a; line-height: 1.6; font-style: italic; }
+.writing-section { padding: 2rem; background: #f0ebe0; border-top: 1px solid #d4c9b0; }
+.writing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.writing-card { background: #faf7f2; border: 1px solid #d4c9b0; border-top: 3px solid #1a3a1a; padding: 1.25rem; }
+.writing-type { font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #1a3a1a; margin-bottom: 0.5rem; }
+.writing-title { font-family: 'EB Garamond', serif; font-size: 19px; font-style: italic; color: #1a0a0a; margin-bottom: 0.4rem; line-height: 1.3; }
+.writing-excerpt { font-family: 'EB Garamond', serif; font-size: 13px; color: #6a5a3a; line-height: 1.6; font-style: italic; }
+.closing-band { background: #1a0a0a; padding: 1.25rem 2rem; text-align: center; }
+.closing-text { font-family: 'EB Garamond', serif; font-size: 16px; font-style: italic; color: #5a3a1a; }
+.closing-text em { color: #c9a84c; font-style: normal; }

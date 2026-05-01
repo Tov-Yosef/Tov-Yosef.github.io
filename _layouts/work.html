@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Work · {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/work.css' | relative_url }}">
+</head>
+<body style="background: #f5f0e8;">
+
+  <div class="flag-bar"></div>
+
+  <nav class="nav">
+    <div class="nav-seal">
+      <div class="seal-circle">
+        <div class="seal-inner">T</div>
+      </div>
+      <div class="seal-text">{{ site.title }}</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}">The Person</a></li>
+      <li><a href="{{ '/work/' | relative_url }}">The Work</a></li>
+      <li><a href="{{ '/vision/' | relative_url }}">The Vision</a></li>
+      <li><a href="{{ '/project/' | relative_url }}">The Project</a></li>
+    </ul>
+    <div class="nav-right">Phase I<br>Real &amp; Personal</div>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <div class="phase-footer">
+    <div class="phase-left">
+      <div class="phase-dot"></div>
+      <div class="phase-text">Phase I · Real &amp; Personal · Active</div>
+    </div>
+    <div class="phase-text">The Project · Living Document</div>
+    <div class="phase-text">{{ site.title }} · 2025</div>
+  </div>
+
+  <div class="flag-bar-bottom"></div>
+
+</body>
+</html>
