@@ -1,0 +1,19 @@
+<div class="hero" style="padding-bottom: 2rem;">
+  <div class="stars-row">
+    · · · <span>★</span> · · · <span>★</span> · · · <span>★</span> · · ·
+  </div>
+  <div class="eyebrow">{{ include.eyebrow }}</div>
+  <h1 class="hero-name" style="font-size: 48px;">{{ include.hero_name }}</h1>
+  <div class="hero-rule-ornate">
+    <div class="rule-line"></div>
+    <div class="rule-small"></div>
+    <div class="rule-diamond"></div>
+    <div class="rule-small"></div>
+    <div class="rule-line right"></div>
+  </div>
+  <div class="hero-sub">{{ include.hero_sub }}</div>
+</div>
+
+<div class="preamble-band">
+  <p class="preamble-text">{{ include.preamble | markdownify }}</p>
+</div>

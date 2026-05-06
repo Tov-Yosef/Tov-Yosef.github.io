@@ -3,45 +3,13 @@ layout: default
 title: "The Person"
 ---
 
-<div class="hero" style="padding-bottom: 2rem;">
-  <div class="stars-row">
-    · · · <span>★</span> · · · <span>★</span> · · · <span>★</span> · · ·
-  </div>
-  <div class="eyebrow">A Self-Portrait in Progress</div>
-  <h1 class="hero-name" style="font-size: 48px;">The Person</h1>
-  <div class="hero-rule-ornate">
-    <div class="rule-line"></div>
-    <div class="rule-small"></div>
-    <div class="rule-diamond"></div>
-    <div class="rule-small"></div>
-    <div class="rule-line right"></div>
-  </div>
-  <div class="hero-sub">Tov · Teacher · Artist · Bard · Dreamer of Nations</div>
-</div>
+{% assign c = site.data.about %}
 
-<div class="preamble-band">
-  <p class="preamble-text">
-    I did not find my path. <em>I followed a question until the path found me.</em>
-  </p>
-</div>
+{% include page-hero.html eyebrow=c.eyebrow hero_name=c.hero_name hero_sub=c.hero_sub preamble=c.preamble %}
 
 <div class="page-content">
-
-  <h2>The Engine</h2>
-  <p>Everything I am runs on a single question: how do I become a better person? That question has taken me further than I expected. It rewrote my religion. It will probably rewrite several more things before I am done.</p>
-  <p>My faith is Jewish — and it is not background noise. It is the organizing principle of how I think about obligation, community, and what it means to do good work in an unfinished world.</p>
-
-  <h2>The Callings</h2>
-  <p>I want to be a Rabbi. Not for the title — for the work. To guide, to teach, to be genuinely responsible to a community. The calling is old and it is real.</p>
-  <p>I am also an artist. Visual art, writing, performance, game design — not because I cannot choose, but because the inner world is too large for a single medium. I am a systems thinker who makes things. A researcher who cannot stop finding connections. A teacher who learns by teaching.</p>
-  <p>These are not separate callings. They are the same person working across different surfaces.</p>
-
-  <h2>The Bard</h2>
-  <p>There is a version of me that is loud, alive, magnetic — the one who held rooms and told stories and made people feel like something was happening. That version is still here. He is not gone. He is conserving. Building toward something larger than any room.</p>
-  <p>I live with deep games — Magic: The Gathering for its architecture, Dungeons & Dragons for its collaborative dreaming, Torah for both. I find the same pleasure in all of them: the pleasure of a system that rewards genuine attention.</p>
-
-  <h2>The Direction</h2>
-  <p>I am building toward Tzfat — its mysticism, its history, its particular frequency. I am building toward a community that does not yet have a name. I am building toward a body of work that holds art and doctrine and law in the same hand.</p>
-  <p>This website is part of that build. You are reading an early chapter.</p>
-
+  {% for section in c.sections %}
+  <h2>{{ section.title }}</h2>
+  {{ section.body | markdownify }}
+  {% endfor %}
 </div>
