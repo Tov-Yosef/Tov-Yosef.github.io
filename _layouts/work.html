@@ -16,18 +16,28 @@
   <div class="flag-bar"></div>
 
   <nav class="nav">
-    <div class="nav-seal">
-      <div class="seal-circle">
-        <div class="seal-inner">T</div>
+    <a href="{{ '/' | relative_url }}" style="text-decoration: none;">
+      <div class="nav-seal">
+        <div class="seal-circle">
+          <div class="seal-inner">T</div>
+        </div>
+        <div class="seal-text">{{ site.title }}</div>
       </div>
-      <div class="seal-text">{{ site.title }}</div>
-    </div>
-    <ul class="nav-links">
-      <li><a href="{{ '/' | relative_url }}">The Person</a></li>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="{{ '/about/' | relative_url }}">The Person</a></li>
       <li><a href="{{ '/work/' | relative_url }}">The Work</a></li>
       <li><a href="{{ '/vision/' | relative_url }}">The Vision</a></li>
       <li><a href="{{ '/project/' | relative_url }}">The Project</a></li>
     </ul>
+
     <div class="nav-right">Phase I<br>Real &amp; Personal</div>
   </nav>
 
@@ -45,6 +55,15 @@
   </div>
 
   <div class="flag-bar-bottom"></div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>

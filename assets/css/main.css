@@ -375,3 +375,87 @@ body {
 }
 
 .page-content a:hover { border-color: #c9a84c; }
+
+/* REMOVE UNDERLINES FROM ALL NAV/UI LINKS */
+a { text-decoration: none; }
+.nav a, .nav-seal a, .work-back, .phase-footer a { text-decoration: none; }
+
+/* HAMBURGER — hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #c9a84c;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #04040a;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #1e1a0e;
+    gap: 0;
+    z-index: 100;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #1e1a0e;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.875rem 0;
+    font-size: 13px;
+  }
+
+  .nav {
+    position: relative;
+  }
+}
