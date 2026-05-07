@@ -30,7 +30,7 @@
     </div>
 
     <div class="footer-col">
-      <div class="footer-col-title">The Blog</div>
+      <div class="footer-col-title"><a href="/blog/">The Blog</a></div>
       <ul class="footer-links">
         {% for post in site.posts limit:3 %}
         <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
@@ -46,5 +46,10 @@
 
   <div class="footer-base">
     <div class="footer-base-text">{{ site.title }} · {{ site.tagline }}</div>
+    <div class="footer-credit">
+      Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/Tov-Yosef/Tov-Yosef.github.io" target="_blank" rel="noopener">View Source</a>
+    </div>
   </div>
 </footer>

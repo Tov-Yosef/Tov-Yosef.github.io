@@ -486,6 +486,15 @@ a { text-decoration: none; }
   margin-bottom: 1.25rem;
 }
 
+.footer-col-title a {
+  color: #c9a84c;
+  text-decoration: none;
+}
+
+.footer-col-title a:hover {
+  color: #e8d5a8;
+}
+
 .footer-links {
   list-style: none;
   display: flex;
@@ -593,4 +602,27 @@ a { text-decoration: none; }
     left: 0;
     transform: none;
   }
+}
+
+/* FOOTER CREDIT LINE */
+.footer-credit {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.footer-credit a {
+  color: #c9a84c;
+  text-decoration: none;
+  border-bottom: 1px solid #c9a84c;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-credit a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
 }
