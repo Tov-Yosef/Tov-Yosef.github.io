@@ -8,6 +8,12 @@ author:
   name: "Tov"
   email: "thaicares@gmail.com"
 
+social:
+  facebook: "https://www.facebook.com/tyler.carroll.1000/"
+  instagram: "https://www.instagram.com/thaicares/"
+  threads: "https://www.threads.com/@thaicares"
+  github: "https://github.com/Tov-Yosef"
+
 # Build settings
 theme: null
 plugins:

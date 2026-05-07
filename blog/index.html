@@ -1,0 +1,41 @@
+---
+layout: blog
+title: "The Blog"
+---
+
+<div class="blog-header">
+  <div class="blog-header-inner">
+    <div class="blog-eyebrow">Dispatches · Essays · Updates</div>
+    <h1 class="blog-title">The Blog</h1>
+    <div class="post-rule">
+      <div class="pr-line"></div>
+      <div class="pr-diamond"></div>
+      <div class="pr-line"></div>
+    </div>
+    <p class="blog-intro">Raw, real, and ongoing. The living pulse of the project — and whatever else is worth saying.</p>
+  </div>
+</div>
+
+<div class="blog-index">
+  <div class="blog-index-inner">
+    {% if site.posts.size > 0 %}
+      {% for post in site.posts %}
+      <article class="post-card">
+        <div class="post-card-meta">
+          {% if post.categories %}<span class="post-card-category">{{ post.categories | first }}</span>{% endif %}
+          <span class="post-card-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+        </div>
+        <h2 class="post-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {% if post.subtitle %}<p class="post-card-subtitle">{{ post.subtitle }}</p>{% endif %}
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        <a class="post-card-read" href="{{ post.url | relative_url }}">Read more →</a>
+      </article>
+      {% endfor %}
+    {% else %}
+      <div class="blog-empty">
+        <p>The first dispatch is being written.</p>
+        <p>Return soon.</p>
+      </div>
+    {% endif %}
+  </div>
+</div>

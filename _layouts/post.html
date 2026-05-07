@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Work · {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
+  <title>{{ page.title }} · {{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/work.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
 </head>
-<body style="background: #f5f0e8;">
+<body class="blog-body">
 
   <div class="flag-bar"></div>
 
@@ -37,8 +37,27 @@
     </ul>
   </nav>
 
-  <main>
-    {{ content }}
+  <div class="post-header">
+    <div class="post-header-inner">
+      <a class="post-back" href="{{ '/blog/' | relative_url }}">← The Blog</a>
+      <div class="post-meta-top">
+        {% if page.categories %}<span class="post-category">{{ page.categories | first }}</span>{% endif %}
+        <span class="post-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+      </div>
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+      <div class="post-rule">
+        <div class="pr-line"></div>
+        <div class="pr-diamond"></div>
+        <div class="pr-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="post-main">
+    <div class="post-body">
+      {{ content }}
+    </div>
   </main>
 
   {% include site-footer.html %}

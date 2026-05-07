@@ -23,35 +23,24 @@
         <div class="seal-text">{{ site.title }}</div>
       </div>
     </a>
-
     <button class="hamburger" id="hamburger" aria-label="Open navigation">
       <span></span>
       <span></span>
       <span></span>
     </button>
-
     <ul class="nav-links" id="nav-links">
       <li><a href="{{ '/about/' | relative_url }}">The Person</a></li>
       <li><a href="{{ '/work/' | relative_url }}">The Work</a></li>
       <li><a href="{{ '/vision/' | relative_url }}">The Vision</a></li>
       <li><a href="{{ '/project/' | relative_url }}">The Project</a></li>
     </ul>
-
-    <div class="nav-right">Phase I<br>Real &amp; Personal</div>
   </nav>
 
   <main>
     {{ content }}
   </main>
 
-  <div class="phase-footer">
-    <div class="phase-left">
-      <div class="phase-dot"></div>
-      <div class="phase-text">Phase I · Real &amp; Personal · Active</div>
-    </div>
-    <div class="phase-text">The Project · Living Document</div>
-    <div class="phase-text">{{ site.title }} · 2025</div>
-  </div>
+  {% include site-footer.html %}
 
   <div class="flag-bar-bottom"></div>
 

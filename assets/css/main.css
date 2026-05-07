@@ -459,3 +459,138 @@ a { text-decoration: none; }
     position: relative;
   }
 }
+
+/* FOOTER */
+.site-footer {
+  background: #04040a;
+  border-top: 1px solid #1e1a0e;
+  padding: 3rem 2rem 0;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #1e1a0e;
+}
+
+.footer-col-title {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links a {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  color: #8a7a42;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: #c9a84c; }
+
+.footer-muted {
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #3a2e10;
+}
+
+.footer-blog-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  text-decoration: none;
+  border-bottom: 1px solid #3a2e10;
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+
+.footer-blog-link:hover { border-color: #c9a84c; }
+
+.footer-base {
+  padding: 1.25rem 0;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-base-text {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #3a2e10;
+}
+
+/* FOOTER MOBILE */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #2a2410;
+  border-radius: 50%;
+  color: #8a7a42;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.social-icon:hover {
+  color: #c9a84c;
+  border-color: #c9a84c;
+}
+
+.social-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* FIX NAV CENTERING */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    left: 0;
+    transform: none;
+  }
+}
