@@ -2,14 +2,16 @@
 layout: default
 ---
 
+{% assign c = site.data.home %}
+
 <div class="hero">
   <div class="stars-row">
     · · · <span>★</span> · · · <span>★</span> · · · <span>★</span> · · · <span>★</span> · · · <span>★</span> · · ·
   </div>
 
-  <div class="eyebrow">Teacher · Artist · Builder · Dreamer of Nations</div>
+  <div class="eyebrow">{{ c.eyebrow }}</div>
 
-  <h1 class="hero-name">TOV</h1>
+  <h1 class="hero-name">{{ c.hero_name }}</h1>
 
   <div class="hero-rule-ornate">
     <div class="rule-line"></div>
@@ -19,19 +21,15 @@ layout: default
     <div class="rule-line right"></div>
   </div>
 
-  <div class="hero-sub">A civilization in progress · Est. 2025</div>
+  <div class="hero-sub">{{ c.hero_sub }}</div>
 
-  <p class="proclamation">
-    We hold these values not as inherited truths<br>
-    but as obligations — earned, argued over,<br>
-    and passed forward to those who come next.
-  </p>
+  <p class="proclamation">{{ c.proclamation | newline_to_br }}</p>
 
-  <div class="proclamation-attr">— From the founding documents, in progress</div>
+  <div class="proclamation-attr">{{ c.proclamation_attr }}</div>
 
   <div class="cta-row">
-    <a class="btn-enter" href="/project/">Enter the Record</a>
-    <a class="btn-secondary" href="/about/">Read the Portrait</a>
+    <a class="btn-enter" href="{{ c.cta_primary_url }}">{{ c.cta_primary_text }}</a>
+    <a class="btn-secondary" href="{{ c.cta_secondary_url }}">{{ c.cta_secondary_text }}</a>
   </div>
 
   <div class="stars-row" style="margin-bottom: 0;">
@@ -40,33 +38,29 @@ layout: default
 </div>
 
 <div class="preamble-band">
-  <p class="preamble-text">
-    This is not a portfolio. This is not a blog. This is <em>the record of a world being built</em> —
-    outward from one person's inner life, through art and doctrine and law,
-    toward something that <em>does not yet exist but must.</em>
-  </p>
+  <p class="preamble-text">{{ c.preamble | markdownify }}</p>
 </div>
 
 <div class="pillars">
   <div class="pillar">
-    <div class="pillar-number">I</div>
-    <div class="pillar-glyph">✦</div>
-    <div class="pillar-label">The Person</div>
+    <div class="pillar-number">{{ c.pillar_1_number }}</div>
+    <div class="pillar-glyph">{{ c.pillar_1_glyph }}</div>
+    <div class="pillar-label">{{ c.pillar_1_label }}</div>
     <div class="pillar-rule"></div>
-    <p class="pillar-text">A teacher who has not yet fully claimed the title. A bard. A system-builder in burnout, not bankruptcy.</p>
+    <p class="pillar-text">{{ c.pillar_1_text }}</p>
   </div>
   <div class="pillar">
-    <div class="pillar-number">II</div>
-    <div class="pillar-glyph">⬡</div>
-    <div class="pillar-label">The Work</div>
+    <div class="pillar-number">{{ c.pillar_2_number }}</div>
+    <div class="pillar-glyph">{{ c.pillar_2_glyph }}</div>
+    <div class="pillar-label">{{ c.pillar_2_label }}</div>
     <div class="pillar-rule"></div>
-    <p class="pillar-text">Visual art, writing, game design — one mind across many surfaces, chasing how things fit together.</p>
+    <p class="pillar-text">{{ c.pillar_2_text }}</p>
   </div>
   <div class="pillar">
-    <div class="pillar-number">III</div>
-    <div class="pillar-glyph">◈</div>
-    <div class="pillar-label">The Vision</div>
+    <div class="pillar-number">{{ c.pillar_3_number }}</div>
+    <div class="pillar-glyph">{{ c.pillar_3_glyph }}</div>
+    <div class="pillar-label">{{ c.pillar_3_label }}</div>
     <div class="pillar-rule"></div>
-    <p class="pillar-text">A civilization built from obligation — to community, to the stranger, to a world still being completed.</p>
+    <p class="pillar-text">{{ c.pillar_3_text }}</p>
   </div>
 </div>
